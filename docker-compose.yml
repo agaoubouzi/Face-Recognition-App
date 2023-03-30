@@ -1,0 +1,14 @@
+version: '3'
+services:
+  frontend:
+    build:
+      context: ./app/frontend
+    ports:
+      - "8000:8000"
+    depends_on:
+      - api
+  api:
+    build:
+      context: ./app/api
+    ports:
+      - "3000:3000"
